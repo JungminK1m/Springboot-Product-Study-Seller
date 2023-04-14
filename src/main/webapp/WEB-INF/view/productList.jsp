@@ -12,9 +12,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach items="${productList}" var="product">
+                    <c:forEach items="${productList}" var="product" varStatus="status">
                         <tr>
-                            <td>${product.productId}</td>
+                            <td>${status.count}</td>
                             <td><a href="/product/${product.productId}">${product.productName}</a></td>
                             <td>${product.productPrice}원</td>
                             <td>${product.productQty}개</td>
